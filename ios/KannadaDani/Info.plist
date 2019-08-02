@@ -48,8 +48,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
@@ -85,6 +84,10 @@
 		<string>Ubuntu-R.ttf</string>
 		<string>Ubuntu-RI.ttf</string>
 		<string>Sail-Regular.otf</string>
+		<string>Raleway-Medium.ttf</string>
+		<string>Titillium-Light.otf</string>
+		<string>Raleway-Bold.ttf</string>
+		<string>Raleway-Thin.ttf</string>
 	</array>
 </dict>
 </plist>

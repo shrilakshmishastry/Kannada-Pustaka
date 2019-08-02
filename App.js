@@ -34,7 +34,8 @@ const App = createSwitchNavigator(
             screen:SplashImage
         },
         HomeNavigator:{
-            screen:HomeNavigator
+            screen:HomeNavigator,
+
         }
 
     },

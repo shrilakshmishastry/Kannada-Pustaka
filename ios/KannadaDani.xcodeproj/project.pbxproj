@@ -47,6 +47,11 @@
 		121BFD1F6FED47AD8A8140EC /* Sail-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE2BF349148446B78A550487 /* Sail-Regular.otf */; };
 		AB977F71B2684C4E8A25E3F2 /* Sail-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 29BFB7A52D914B488B23BF22 /* Sail-Regular.otf */; };
 		FFDE525845FC41FD84F0A1D3 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F0C74B79DEE4A889C5310A1 /* Ubuntu-M.ttf */; };
+		DB491443F50044B08E6C190D /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02D1D20418A341269D251602 /* Raleway-Medium.ttf */; };
+		E6A89B27B3CC4D0691086B5A /* Titillium-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C79E295CE9E4BB4A04C3A0C /* Titillium-Light.otf */; };
+		C18044EC51C64CC1898441E6 /* journal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95E84A2AF9374822BB9585A2 /* journal.ttf */; };
+		1AA9797E89C94CD0B91C4CCE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D55D5A1E49542D7A29101A4 /* Raleway-Bold.ttf */; };
+		68611A3F6748414AB27501CA /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BDA2534C1CC4E9982CA863F /* Raleway-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +119,11 @@
 		CE2BF349148446B78A550487 /* Sail-Regular.otf */ = {isa = PBXFileReference; name = "Sail-Regular.otf"; path = "../assets/fonts/sail/Sail-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		29BFB7A52D914B488B23BF22 /* Sail-Regular.otf */ = {isa = PBXFileReference; name = "Sail-Regular.otf"; path = "../assets/fonts/Sail-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5F0C74B79DEE4A889C5310A1 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; name = "Ubuntu-M.ttf"; path = "../assets/fonts/Ubuntu-M.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		02D1D20418A341269D251602 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; name = "Raleway-Medium.ttf"; path = "../assets/fonts/Raleway-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2C79E295CE9E4BB4A04C3A0C /* Titillium-Light.otf */ = {isa = PBXFileReference; name = "Titillium-Light.otf"; path = "../assets/fonts/Titillium-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		95E84A2AF9374822BB9585A2 /* journal.ttf */ = {isa = PBXFileReference; name = "journal.ttf"; path = "../assets/fonts/journal.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D55D5A1E49542D7A29101A4 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; name = "Raleway-Bold.ttf"; path = "../assets/fonts/Raleway-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BDA2534C1CC4E9982CA863F /* Raleway-Thin.ttf */ = {isa = PBXFileReference; name = "Raleway-Thin.ttf"; path = "../assets/fonts/Raleway-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +266,11 @@
 				CE2BF349148446B78A550487 /* Sail-Regular.otf */,
 				29BFB7A52D914B488B23BF22 /* Sail-Regular.otf */,
 				5F0C74B79DEE4A889C5310A1 /* Ubuntu-M.ttf */,
+				02D1D20418A341269D251602 /* Raleway-Medium.ttf */,
+				2C79E295CE9E4BB4A04C3A0C /* Titillium-Light.otf */,
+				95E84A2AF9374822BB9585A2 /* journal.ttf */,
+				1D55D5A1E49542D7A29101A4 /* Raleway-Bold.ttf */,
+				9BDA2534C1CC4E9982CA863F /* Raleway-Thin.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -429,6 +444,11 @@
 				121BFD1F6FED47AD8A8140EC /* Sail-Regular.otf in Resources */,
 				AB977F71B2684C4E8A25E3F2 /* Sail-Regular.otf in Resources */,
 				FFDE525845FC41FD84F0A1D3 /* Ubuntu-M.ttf in Resources */,
+				DB491443F50044B08E6C190D /* Raleway-Medium.ttf in Resources */,
+				E6A89B27B3CC4D0691086B5A /* Titillium-Light.otf in Resources */,
+				C18044EC51C64CC1898441E6 /* journal.ttf in Resources */,
+				1AA9797E89C94CD0B91C4CCE /* Raleway-Bold.ttf in Resources */,
+				68611A3F6748414AB27501CA /* Raleway-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

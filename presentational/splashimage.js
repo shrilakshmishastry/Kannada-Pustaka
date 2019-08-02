@@ -29,7 +29,7 @@ class SplashImage extends React.Component{
     return(
 
             <View>
-               <Image source={require('./../images/download.png')} style={styles.image} resizeMode="contain" />
+               <Image source={require('./../assets/images/JustLogo.png')} style={styles.image} resizeMode="contain" />
             </View>
         );
 
