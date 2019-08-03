@@ -27,22 +27,25 @@ const Home = createStackNavigator(
     HomeScreen:{
         screen:HomeScreen,
         navigationOptions:()=>({
-            header:<HeaderHome/>,
+            header:<HeaderHome/>
 
         }),
+
     },
    Grade8thPoliticalScience:{
         screen:Grade8thPoliticalScience,
         navigationOptions:()=>({
             title:"Std 8th Podcasts",
-             headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />
+             headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />,
+
       }),
     },
     Grade8thSoicology:{
             screen:Grade8thSoicology,
-            navigationOptions:()=>({
+            navigationOptions:({navigation})=>({
                 title:"Std 8th Podcasts",
-                 headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />
+                 headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />,
+                 tabBarVisible: false
           }),
         },
     Grade8thEconomics:{

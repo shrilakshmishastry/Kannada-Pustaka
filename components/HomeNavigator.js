@@ -3,7 +3,7 @@ import { createMaterialBottomTabNavigator } from "react-navigation-material-bott
 import {Platform,Image,Text} from 'react-native';
 import Home from './Home.js';
 import Profile from './../presentational/profile.js';
-import TheWall from './../presentational/thewall.js';
+import searchBar from './../presentational/searchBar.js';
 import BookMark from './../presentational/bookMarks.js';
 import HeaderHome from './../presentational/headerHome.js';
 import {Icon} from 'native-base';
@@ -25,14 +25,14 @@ const HomeNavigator =  createMaterialBottomTabNavigator({
             ),
         },
     },
-    "The Wall":{
-        screen:TheWall,
+    "searchBar":{
+        screen:searchBar,
          navigationOptions:{
             title:" ",
             tabBarIcon : ({focused,tintColor}) =>(
                 focused?
-                    <Icon type="Foundation" name="list-bullet" style={{color:'#818a51'}}/>:
-                    <Icon type="Foundation" name="list-bullet" style={{color:'#6c757d'}} />
+                    <Icon type="MaterialIcons" name="search" style={{color:'#818a51'}}/>:
+                    <Icon type="MaterialIcons" name="search" style={{color:'#6c757d'}} />
             ),
 
            },
