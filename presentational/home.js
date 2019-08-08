@@ -1,4 +1,4 @@
-import {View,Text,StyleSheet,Image,Linking,Alert,ScrollView,Touch,TouchableHighlight,FlatList,Dimensions} from 'react-native';
+import {View,Text,StyleSheet,Image,StatusBar,Linking,Alert,ScrollView,Touch,TouchableHighlight,FlatList,Dimensions} from 'react-native';
 import React,{Component} from 'react';
 import{Container,Icon,Button,Card,CardItem,Body,Left,Thumbnail } from 'native-base';
 import Searchbar from './searchBar.js';
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
 
 
 class HomeScreen extends React.Component{
+
     state={
         url:[
         'https://static1.squarespace.com/static/57ed94f3b8a79b1f99f831aa/589e0833d2b85720b6c3db95/5c8e54906e9a7f537d3bc1e1/1554308722233/8thEconomics2016-Cover.png?format=300w',
@@ -69,26 +70,45 @@ class HomeScreen extends React.Component{
             'This contains Podcasts of 2 nd PUC History textbook ...',
              'This contains Podcasts of 2 nd PUC Kannada textbook...',
         ],
-        width:Dimensions.get('screen').height-10,
-        height:Dimensions.get('screen').width
+
     };
     componentDidMount(){
         axios.get('https://itunes.apple.com/search?media=podcast&entity=podcast&attribute=artistTerm&term=kannadapustaka')
         .then(res=>{
-            console.log(res.data.results[0].feedUrl);
-            axios.get(res.data.results[0].feedUrl)
-            .then(res=>{
 
-            }
 
-            )
         })
         }
 
     render(){
         return(
             <View>
+            <StatusBar backgroundColor="#a26ffd" barStyle="light-content" />
             <ScrollView  >
+            <View style={{flex:1,flexDirection:'column'}} >
+              <View style={{height:hp('20%'),alignSelf:'stretch',backgroundColor:'#a26ffd'}} >
+                    <Text style={{marginTop:hp('3%'),marginLeft:hp('3%'),marginBottom:wp('1%'),
+                    fontFamily:'Raleway-Bold',fontSize:20,alignSelf:'flex-start',color:'white'}} >
+                        Explore
+                    </Text>
+                    <Text style={{fontFamily:'Raleway-Medium',color:'white',marginLeft:hp('3%'),
+                    marginBottom:wp('3%'),}} >
+                        Based on your interests
+                    </Text>
+                     <Image source={require('./../assets/images/oLiB.png')} style={{height:hp('30%'),width:wp('90%'),
+                     alignSelf:'center',borderRadius:5,alignSelf:'center'}} />
+               </View>
+               <View style={{height:hp('5%'),alignSelf:'stretch',marginTop:hp('5%'),marginLeft:hp('3%'),
+               marginTop:hp('25%'),marginBottom:wp('3%')}} >
+                    <Text style={{fontFamily:'Raleway-Bold',fontSize:20}} >
+                        Listen Now
+                    </Text>
+                    <Text style={{fontFamily:'Raleway-Medium',color:'#6c757d',
+                                              marginBottom:wp('3%'),}}>
+                                    Based on Subjects
+                    </Text>
+               </View>
+            </View>
               <FlatList
                       data={[
                          {key:'Economics'},{key:'Political Science'},{key:'Soicology'},{key:'Economics'},

@@ -15,17 +15,16 @@ render(){
                         Kannada Pustaka Initiative
                     </Text>
                     <TouchableHighlight
-                     style={{marginTop:hp('1%'),borderRadius:20,height:hp('5%')}}
+                     style={{alignItems:'center',padding:5,borderColor:'#a26ffd',
+                                       borderWidth:1,borderRadius:10,marginTop:hp('2%')}}
                       onPress = {()=>this.props.navigation.navigate('Soicology8th')}
-                      underlayColor='#818a51'
+                      underlayColor='#a26ffd'
                     >
-                    <View>
-                        <Button bordered rounded style={{borderColor:'#818a51',height:hp('5%'),justifyContent:'center'}} >
+
                             <Text style={{fontFamily:'Raleway-Medium',fontSize:13}}  >
                                 Episodes
                             </Text>
-                        </Button>
-                    </View>
+
                     </TouchableHighlight>
                 </View>
                 <View style={{marginRight:hp('3%')}} >

@@ -1,16 +1,24 @@
-import {View,Text} from 'react-native';
-import React from 'react';
+import {View,Text,StatusBar,ScrollView,Image,FlatList,TouchableHighlight,} from 'react-native';
+import React,{Component,useState} from 'react';
+import {widthPercentageToDP as wp,heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import{Card,CardItem } from 'native-base';
 
-const Economics8th = () =>{
+class Economics8th extends React.Component{
 
-return(
 
-    <View>
-        <Text>
-            Economics8th
-        </Text>
-    </View>
-);
+    render(){
+        return(
+            <View>
+                <Text>
+                    hello
+                </Text>
+            </View>
+
+        );
+
+
+    }
+
 
 }
 

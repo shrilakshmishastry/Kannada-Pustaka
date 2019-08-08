@@ -19,7 +19,7 @@ const HomeNavigator =  createMaterialBottomTabNavigator({
 
             tabBarIcon : ({focused,tintColor})=>(
                 focused ?
-                    <Icon type="MaterialCommunityIcons"  name="home" style={{color:'#818a51'}} />:
+                    <Icon type="MaterialCommunityIcons"  name="home" style={{color:'#a26ffd'}} />:
                     <Icon type="MaterialCommunityIcons"  name="home" style={{color:'#6c757d'}} />
 
             ),
@@ -28,10 +28,12 @@ const HomeNavigator =  createMaterialBottomTabNavigator({
     "searchBar":{
         screen:searchBar,
          navigationOptions:{
-            title:" ",
+              title:" ",
+           headerTintColor:'black',
+             headerTransparent:true,
             tabBarIcon : ({focused,tintColor}) =>(
                 focused?
-                    <Icon type="MaterialIcons" name="search" style={{color:'#818a51'}}/>:
+                    <Icon type="MaterialIcons" name="search" style={{color:'#a26ffd'}}/>:
                     <Icon type="MaterialIcons" name="search" style={{color:'#6c757d'}} />
             ),
 
@@ -43,7 +45,7 @@ const HomeNavigator =  createMaterialBottomTabNavigator({
                       title:" ",
                       tabBarIcon:({focused,tintColor})=>(
                         focused?
-                        <Icon type="AntDesign" name="download" style={{color:'#818a51'}} />:
+                        <Icon type="AntDesign" name="download" style={{color:'#a26ffd'}} />:
                         <Icon type="AntDesign" name="download" style={{color:'#6c757d'}} />
                       ),
 

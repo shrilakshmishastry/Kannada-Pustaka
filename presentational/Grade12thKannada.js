@@ -11,19 +11,20 @@ render(){
                     <Text style={{fontFamily:'Raleway-Medium',fontSize:18,textAlign:'left'}}  >
                         History
                     </Text>
-                    <Text style={{fontFamily:'Raleway-Medium',fontSize:13,marginTop:hp('1%'),color:'#818a51'}} >
+                    <Text style={{fontFamily:'Raleway-Medium',fontSize:13,marginTop:hp('1%'),color:'#a26ffd'}} >
                         Kannada Pustaka Initiative
                     </Text>
                     <TouchableHighlight
-                     style={{marginTop:hp('1%'),borderRadius:20}}
+                      style={{alignItems:'center',padding:5,borderColor:'#a26ffd',
+                                                                 borderWidth:1,borderRadius:10,marginTop:hp('2%')}}
                       onPress = {()=>this.props.navigation.navigate('Kannada12th')}
-                      underlayColor='#818a51'
+                      underlayColor='#a26ffd'
                     >
-                        <Button bordered rounded style={{borderColor:'#818a51',height:hp('5%'),justifyContent:'center'}} >
+
                             <Text style={{fontFamily:'Raleway-Medium',fontSize:13}}  >
                                 Episodes
                             </Text>
-                        </Button>
+
                     </TouchableHighlight>
                 </View>
                 <View style={{marginRight:hp('3%')}} >
@@ -31,7 +32,7 @@ render(){
                     style={{height:hp('17%'),width:wp('30%'),borderRadius:5}} />
                 </View>
             </View>
-            <View style={{marginLeft:hp('3%'),marginRight:hp('3%'),borderTopWidth:1,marginTop:hp('2%'),color:'#818a51'}} >
+            <View style={{marginLeft:hp('3%'),marginRight:hp('3%'),borderTopWidth:1,marginTop:hp('2%'),color:'#a26ffd'}} >
                 <Text style={{textAlign:'left',fontFamily:'Raleway-Medium',marginTop:hp('5%')}} >
                 Write something about podcast.
                 Klingons are the space suits of the strange x-ray vision.Career is not parallel in over there, the realm of bliss, or nirvana, but everywhere.
@@ -39,7 +40,7 @@ render(){
                  </Text>
             </View>
             <View style={{marginLeft:hp('3%'),marginTop:hp('5%'),marginRight:hp('3%'),paddingBottom:hp('4%')}}  >
-                <Text style={{textAlign:'left',fontFamily:'Raleway-Bold',color:'#818a51'}} >
+                <Text style={{textAlign:'left',fontFamily:'Raleway-Bold',color:'#a26ffd'}} >
                     Contributing volunteers:
                 </Text>
                 <Text style={{textAlign:'left',fontFamily:'Raleway-Medium',marginTop:hp('3%')}} >

@@ -27,7 +27,7 @@ const Home = createStackNavigator(
     HomeScreen:{
         screen:HomeScreen,
         navigationOptions:()=>({
-            header:<HeaderHome/>
+            header:null
 
         }),
 
@@ -45,21 +45,23 @@ const Home = createStackNavigator(
             navigationOptions:({navigation})=>({
                 title:"Std 8th Podcasts",
                  headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />,
-                 tabBarVisible: false
+
           }),
         },
     Grade8thEconomics:{
             screen:Grade8thEconomics,
             navigationOptions:()=>({
-                title:"Std 8th Podcasts",
-                 headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />
+                title:" ",
+                   headerTintColor:'black',
+                     headerTransparent:true,
+
           }),
         },
     Grade9thEconomics:{
         screen: Grade9thEconomics,
          navigationOptions:()=>({
                     title:"Std 9th Podcasts",
-                    headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />
+
                 }),
     },
     Grade9thSocialScience:{
@@ -93,8 +95,9 @@ const Home = createStackNavigator(
     Economics8th :{
         screen:Economics8th,
         navigationOptions:()=>({
-            title:"Eonomics Std 8th",
-             headerBackImage:<Image source={require('./../assets/images/JustLogo.png')} style={{height:30,width:30}} />
+            title:" ",
+             headerTransparent:true,
+               headerTintColor:'white',
         }),
      },
    Economics9th:{

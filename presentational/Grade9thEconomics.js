@@ -15,15 +15,16 @@ render(){
                         Kannada Pustaka Initiative
                     </Text>
                     <TouchableHighlight
-                     style={{marginTop:hp('1%'),borderRadius:20}}
+                      style={{alignItems:'center',padding:5,borderColor:'#a26ffd',
+                                                                 borderWidth:1,borderRadius:10,marginTop:hp('2%')}}
                       onPress = {()=>this.props.navigation.navigate('Economics9th')}
-                      underlayColor='#818a51'
+                      underlayColor='#a26ffd'
                     >
-                        <Button bordered rounded style={{borderColor:'#818a51',height:hp('5%'),justifyContent:'center'}} >
+
                             <Text style={{fontFamily:'Raleway-Medium',fontSize:13}}  >
                                 Episodes
                             </Text>
-                        </Button>
+
                     </TouchableHighlight>
                 </View>
                 <View style={{marginRight:hp('3%')}} >

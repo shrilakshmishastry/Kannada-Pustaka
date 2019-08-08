@@ -1,115 +1,125 @@
-import {View,Text,FlatList,ActivityIndicator} from 'react-native';
+import {View,Text,FlatList,ActivityIndicator,ScrollView,TouchableHighlight} from 'react-native';
 import React,{Component} from 'react';
 import {ListItem,SearchBar} from 'react-native-elements';
 import axios from 'axios';
+import {widthPercentageToDP as wp,heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { Icon,Card,CardItem,ScrollableTab} from 'native-base';
 
 class searchBar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loading: false,
-      data: [],
-      error: null,
+    state={
+        data:[],
+        array:[{chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        {chapterName: 'ಗ್ರಾಹಕರ ಶಿಕ್ಷಣ ಮತ್ತು ರಕ್ಷಣೆ',date: '3 oct 2019'},
+        ],
+        loading:false,
+        search:''
     };
-
-    this.arrayholder = [];
-  }
-
-  componentDidMount() {
-    this.makeRemoteRequest();
-  }
-
-  makeRemoteRequest = () => {
-    const url = `https://randomuser.me/api/?&results=20`;
-    this.setState({ loading: true });
-
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
+    componentDidMount(){
         this.setState({
-          data: res.results,
-          error: res.error || null,
-          loading: false,
+            data:this.state.array
         });
-        this.arrayholder = res.results;
-      })
-      .catch(error => {
-        this.setState({ error, loading: false });
-      });
-  };
 
-  renderSeparator = () => {
-    return (
-      <View
-        style={{
-          height: 1,
-          width: '86%',
-          backgroundColor: '#CED0CE',
-          marginLeft: '14%',
-        }}
-      />
+    };
+    renderItem =({item,index})=>(
+
+            <View style={{marginLeft:hp('3%'),marginRight:hp('3%')}} >
+              <TouchableHighlight onPress={()=>this.props.navigation.navigate('HomeScreen')} >
+                <Card style={{paddingBottom:hp('2%'),
+                shadowColor: "#000",
+                shadowOffset: {
+                	width: 0,
+                	height: 3,
+                },
+                shadowOpacity: 0.27,
+                shadowRadius: 4.65,
+
+                elevation: 6,
+                }} >
+                    <CardItem cardBody style={{marginLeft:hp('3%')}} >
+                        <Text style={{fontFamily:'Raleway-Bold',fontSize:12,marginTop:hp('1%')}} >
+                           chapter {index+1} :{this.state.data[index].chapterName}
+                        </Text>
+                        <Icon type="FontAwesome" name="play-circle-o" style={{color:'#a26ffd',marginLeft:hp('5%'),marginTop:hp('2%')}} />
+                    </CardItem>
+                    <CardItem cardBody  >
+                         <Text style={{fontFamily:'Raleway-Bold',fontSize:10,marginLeft:hp('3%'),color:'#6c757d'}} >
+                                                    {this.state.data[index].date}
+                          </Text>
+                    </CardItem>
+                </Card>
+                </TouchableHighlight>
+            </View>
+
+
     );
-  };
+    _keyExtractor = ({item,index})=> index;
+     updateSearch = search =>{
+            this.setState({search});
+            const newData = this.state.array.filter(
+            item=>{
+                const itemData = item.chapterName.toUpperCase();
+                const textData = search.toUpperCase();
+                return itemData.indexOf(textData) >-1;
+            }
 
-  searchFilterFunction = text => {
-    this.setState({
-      value: text,
-    });
+            );
+            this.setState({
+                data:newData
+            });
 
-    const newData = this.arrayholder.filter(item => {
-      const itemData = `${item.name.title.toUpperCase()} ${item.name.first.toUpperCase()} ${item.name.last.toUpperCase()}`;
-      const textData = text.toUpperCase();
+        };
 
-      return itemData.indexOf(textData) > -1;
-    });
-    this.setState({
-      data: newData,
-    });
-  };
 
-  renderHeader = () => {
-    return (
-      <SearchBar
-        placeholder="Type Here..."
-        lightTheme
-        round
-        onChangeText={text => this.searchFilterFunction(text)}
-        autoCorrect={false}
-        value={this.state.value}
-      />
-    );
-  };
+ render(){
+    return(
+        <ScrollView>
+        <View style={{flexDirection:'column',backgroundColor:'white'}} >
+           <View style={{backgroundColor:'white',marginBottom:hp('2%'),backgroundColor:'#a26ffd',
+           paddingBottom:hp('2%')}} >
+               <Text style={{marginTop:hp('4%'),fontFamily:'Raleway-Bold',fontSize:20,
+               marginLeft:hp('4%'),color:'white'}} >
+                      Search Topics
+               </Text>
+           </View>
+           <View style={{alignSelf:'stretch'}} >
+               <FlatList
+                data={this.state.data}
+                renderItem={this.renderItem}
+                keyExtractor={this._keyExtractor}
+                ListHeaderComponent={
+                      <SearchBar
+                                    placeholder="Search Podcast"
+                                    onChangeText={this.updateSearch}
+                                    value={this.state.search}
+                                    containerStyle={{
+                                        backgroundColor:'white',
+                                        borderTopColor:'white',
+                                        borderBottomColor:'white',
+                                        height:hp('10%'),
+                                        marginLeft:hp('2%'),
+                                        marginRight:hp('2%')
 
-  render() {
-    if (this.state.loading) {
-      return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <ActivityIndicator />
+                                    }}
+                                    round='true'
+                                inputContainerStyle={{
+                                    backgroundColor:'#e8e8e8',
+                                }}
+                       />
+
+                }
+               />
+           </View>
         </View>
-      );
-    }
-    return (
-      <View style={{ flex: 1 }}>
-        <FlatList
-          data={this.state.data}
-          renderItem={({ item }) => (
-            <ListItem
-              leftAvatar={{ source: { uri: item.picture.thumbnail } }}
-              title={`${item.name.first} ${item.name.last}`}
-              subtitle={item.email}
-              onPress={()=>{
-                this.props.navigation.navigate('HomeScreen')
-              }}
-            />
-          )}
-          keyExtractor={item => item.email}
-          ItemSeparatorComponent={this.renderSeparator}
-          ListHeaderComponent={this.renderHeader}
-        />
-      </View>
+       </ScrollView>
     );
-  }
+ }
 }
 
 
