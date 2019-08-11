@@ -75,7 +75,7 @@ render(){
                                             data={[{key:'1'},{key:'2'},{key:'3'},{key:'4'},{key:'5'},{key:'6'},{key:'7'},{key:'8'},{key:'9'}]}
                                             renderItem={({item,index})=>
                                     <TouchableHighlight
-                                                onPress={()=>this.props.navigation.navigate('HomeScreen')}
+                                                onPress={()=>this.props.navigation.navigate('Economics8th')}
                                     >
                                         <View style={{marginLeft:hp('3%'),marginRight:hp('3%')}} >
                                             <Card style={{paddingBottom:hp('2%'),

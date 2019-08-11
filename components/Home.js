@@ -97,7 +97,7 @@ const Home = createStackNavigator(
         navigationOptions:()=>({
             title:" ",
              headerTransparent:true,
-               headerTintColor:'white',
+
         }),
      },
    Economics9th:{
