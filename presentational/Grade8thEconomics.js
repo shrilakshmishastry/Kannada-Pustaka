@@ -76,6 +76,7 @@ render(){
                                             renderItem={({item,index})=>
                                     <TouchableHighlight
                                                 onPress={()=>this.props.navigation.navigate('Economics8th')}
+                                                underlayColor='white'
                                     >
                                         <View style={{marginLeft:hp('3%'),marginRight:hp('3%')}} >
                                             <Card style={{paddingBottom:hp('2%'),
@@ -95,7 +96,7 @@ render(){
                                                                 Chapter {item.key}: {this.state.chapterName[index]}
                                                     </Text>
                                                     <TouchableHighlight onPress={()=>this.props.navigation.navigate('HomeScreen')}
-                                                            style={{marginLeft:hp('5%')}} >
+                                                            style={{marginLeft:hp('5%')}} underlayColor='white' >
                                                         <Icon type="FontAwesome" name="play-circle-o" style={{color:'#a26ffd'}} />
                                                     </TouchableHighlight>
                                                 </CardItem>

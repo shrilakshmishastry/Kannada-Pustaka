@@ -117,7 +117,9 @@ class HomeScreen extends React.Component{
                         ]}
 
                           renderItem={ ({item,index})=>
-              <TouchableHighlight onPress={()=>this.props.navigation.navigate(this.state.substd[index])} >
+              <TouchableHighlight onPress={()=>this.props.navigation.navigate(this.state.substd[index])}
+                underlayColor='white'
+               >
                 <View style={{flexDirection:'row',margin:16,marginTop:2,marginBottom:5}} >
                     <Card style={styles.cardstyle} >
                         <View style={{flexDirection:'row',

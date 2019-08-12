@@ -7,6 +7,7 @@ import TrackDetail from './Player/TrackDetail.js';
 import SeekBar from './Player/SeekBar.js';
 import Controls from './Player/Controls.js';
 import Video from 'react-native-video';
+import PlaybackControl from './Player/PlaybackControl.js';
 
 
 class Economics8th extends React.Component{
@@ -20,7 +21,7 @@ class Economics8th extends React.Component{
                    title: 'Stressed Out',
                    artist: 'Twenty One Pilots',
                    albumArtUrl: "http://36.media.tumblr.com/14e9a12cd4dca7a3c3c4fe178b607d27/tumblr_nlott6SmIh1ta3rfmo1_1280.jpg",
-                   audioUrl: "http://static1.squarespace.com/static/57ed94f3b8a79b1f99f831aa/t/5ca4db77085229d56caf2464/1554307974925/11+9th+Economics+2016+Chapter+10+%E0%B2%AF%E0%B3%8B%E0%B2%97%E0%B2%95%E0%B3%8D%E0%B2%B7%E0%B3%87%E0%B2%AE%E0%B2%A6+%E0%B2%85%E0%B2%B0%E0%B3%8D%E0%B2%A5%E0%B2%B6%E0%B2%BE%E0%B2%B8%E0%B3%8D%E0%B2%A4%E0%B3%8D%E0%B2%B0.mp3",
+                   audioUrl: "https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3",
                  },
                  {
                    title: 'Love Yourself',
@@ -35,6 +36,8 @@ class Economics8th extends React.Component{
                    audioUrl: "http://static1.squarespace.com/static/57ed94f3b8a79b1f99f831aa/t/5ca4db77085229d56caf2464/1554307974925/11+9th+Economics+2016+Chapter+10+%E0%B2%AF%E0%B3%8B%E0%B2%97%E0%B2%95%E0%B3%8D%E0%B2%B7%E0%B3%87%E0%B2%AE%E0%B2%A6+%E0%B2%85%E0%B2%B0%E0%B3%8D%E0%B2%A5%E0%B2%B6%E0%B2%BE%E0%B2%B8%E0%B3%8D%E0%B2%A4%E0%B3%8D%E0%B2%B0.mp3",
                  },
                ],
+               rate:1.5,
+               showToast:false
 
     };
 
@@ -98,6 +101,12 @@ class Economics8th extends React.Component{
 
         }
       };
+      setRate(value){
+        this.setState({
+            rate:value
+        });
+        console.log(this.state.rate);
+      };
 
     render(){
 
@@ -108,7 +117,7 @@ class Economics8th extends React.Component{
         paused={this.state.paused}               // Pauses playback entirely.
         resizeMode="cover"           // Fill the whole screen at aspect ratio.
         repeat={true}                // Repeat forever.
-        rate={1.0}
+        rate={this.state.rate}
         onLoadStart={this.loadStart} // Callback when video starts to load
         onLoad={this.setDuration.bind(this)}    // Callback when video loads
         onProgress={this.setTime.bind(this)}    // Callback every ~250ms with currentTime
@@ -134,6 +143,11 @@ class Economics8th extends React.Component{
                    onBack={this.onBack.bind(this)}
                    paused={this.state.paused}
                     onForward={this.onForward.bind(this)}
+                />
+                <PlaybackControl
+                    rate={this.state.rate}
+
+                    set={this.setRate.bind(this)}
                 />
                 {video}
             </View>
