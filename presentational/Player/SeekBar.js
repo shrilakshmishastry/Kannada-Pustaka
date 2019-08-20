@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   container: {
     paddingLeft: 16,
     paddingRight: 16,
-    paddingTop: 16,
+    paddingTop: hp('3%'),
     marginLeft:hp('3%'),
     marginRight:hp('3%')
   },

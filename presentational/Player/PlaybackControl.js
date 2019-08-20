@@ -16,7 +16,7 @@ class PlaybackControl extends React.Component{
     };
     render(){
         return(
-          <View style={{marginTop:20}} >
+          <View style={{marginTop:hp('4%')}} >
             <Modal
                 animationType="side"
                 transparent={true}
@@ -76,7 +76,7 @@ class PlaybackControl extends React.Component{
                 </View>
             </Modal>
             <View style={{flexDirection:'row',justifyContent:'space-around'}} >
-                <View style={{height:100,width:50}} >
+                <View style={{height:hp('25%'),width:50}} >
                     <TouchableHighlight
                         onPress={()=>{
                         this.setModalVisible(true)

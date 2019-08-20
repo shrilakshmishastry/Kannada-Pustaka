@@ -45,8 +45,8 @@ const HomeNavigator =  createMaterialBottomTabNavigator({
                       title:" ",
                       tabBarIcon:({focused,tintColor})=>(
                         focused?
-                        <Icon type="AntDesign" name="download" style={{color:'#a26ffd'}} />:
-                        <Icon type="AntDesign" name="download" style={{color:'#6c757d'}} />
+                        <Icon type="AntDesign" name="setting" style={{color:'#a26ffd',fontSize:25}} />:
+                        <Icon type="AntDesign" name="setting" style={{color:'#6c757d',fontSize:25}} />
                       ),
 
 
